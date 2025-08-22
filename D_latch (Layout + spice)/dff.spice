@@ -1,0 +1,62 @@
+* SPICE3 file created from dff.ext - technology: tsmc
+.include ./tsmc180.txt
+.option scale=0.06u
+
+
+Vdd vdd Gnd 1.8
+Vdin clk Gnd pulse(0 1.8 1p 10p 10p 5n 10n)
+Vdinn D Gnd pulse(0 1.8 1p 10p 10p 7n 15n)
+
+M1000 q q_bar a_155_n38# Gnd nfet w=9 l=4
++  ad=99 pd=40 as=117 ps=44
+M1001 q_bar a_59_n83# vdd vdd pfet w=9 l=4
++  ad=117 pd=44 as=819 ps=344
+M1002 a_155_n38# a_60_8# Gnd Gnd nfet w=9 l=4
++  ad=0 pd=0 as=470 ps=194
+M1003 q_bar q a_154_n129# Gnd nfet w=9 l=4
++  ad=99 pd=40 as=117 ps=44
+M1004 a_60_8# D vdd vdd pfet w=9 l=4
++  ad=117 pd=44 as=0 ps=0
+M1005 a_59_n129# a_n29_n113# Gnd Gnd nfet w=9 l=4
++  ad=117 pd=44 as=0 ps=0
+M1006 a_154_n129# a_59_n83# Gnd Gnd nfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1007 Gnd D a_n29_n113# Gnd nfet w=10 l=4
++  ad=0 pd=0 as=120 ps=44
+M1008 a_59_n83# a_n29_n113# vdd vdd pfet w=9 l=4
++  ad=117 pd=44 as=0 ps=0
+M1009 vdd clk a_60_8# vdd pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1010 a_60_n38# D Gnd Gnd nfet w=9 l=4
++  ad=117 pd=44 as=0 ps=0
+M1011 vdd q_bar q vdd pfet w=9 l=4
++  ad=0 pd=0 as=117 ps=44
+M1012 vdd D a_n29_n113# vdd pfet w=9 l=4
++  ad=0 pd=0 as=108 ps=42
+M1013 q a_60_8# vdd vdd pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1014 vdd clk a_59_n83# vdd pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1015 a_59_n83# clk a_59_n129# Gnd nfet w=9 l=4
++  ad=99 pd=40 as=0 ps=0
+M1016 a_60_8# clk a_60_n38# Gnd nfet w=9 l=4
++  ad=99 pd=40 as=0 ps=0
+M1017 vdd q q_bar vdd pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+C0 vdd Gnd 2.87fF
+
+.control
+run
+setplot tran
+plot q D+4 clk+8
+
+set color0=white
+set color1=black
+set color2=red
+set color3=orange
+set color4=blue
+set xbrushwidth=3
+.endc
+
+.tran 10n 100n 
+.end
