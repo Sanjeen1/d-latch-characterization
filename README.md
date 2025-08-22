@@ -33,15 +33,16 @@ This repository contains the characterization of a CMOS D-Latch using SPICE simu
 
 # D flip flop (Positive edge/rising edge trigger) - 
 
+<img width="1168" height="391" alt="image" src="https://github.com/user-attachments/assets/e3e236ae-1d1e-4301-87ee-617d2ad23e3a" />
+
 **check for before rising edge -**
 
-When output q have a glitch due to setup/hold time window -
+**When output q have a glitch due to setup/hold time window -**
 
 **Glitch when data change before 9 ns of rising edge -**
 ![9ns created a glitch](https://github.com/user-attachments/assets/2a8e470c-619e-4067-811f-b3c9b4478426)
 Here we can see check for all rising edge. For example when we see this rising edge as marked above the d is changing nearly 9 ns and we can notice that ouput get glitch or chopped off d data. 
 ![glitch r](https://github.com/user-attachments/assets/2e095fc3-19e8-4ba4-82f3-8c92967f5178)
-
 
 **Glitch free when data change before 10 ns of rising edge -**
 ![10ns setup time](https://github.com/user-attachments/assets/fc183cef-5cea-47c9-af3c-4679d37b90b5)
